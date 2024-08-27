@@ -7,7 +7,7 @@
 2. [ETL Framework](#etl-framework)
 3. [Dataset Description](#dataset-description)
 4. [Project Workflow](#project-workflow)
-5. [Visualizations](#visualizations)
+5. [Power BI Dashboard](#power-bi-dashboard)
 
 ## Project Objective
 Create an entire ETL process in a database and a Power BI dashboard to utilize the Customer Data and achieve below goals:                                 
