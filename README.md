@@ -8,6 +8,7 @@
 3. [Dataset Description](#dataset-description)
 4. [Project Workflow](#project-workflow)
 5. [Power BI Dashboard](#power-bi-dashboard)
+6. [Predictions](#predictions)
 
 ## Project Objective
 Create an entire ETL process in a database and a Power BI dashboard to utilize the Customer Data and achieve below goals:                                 
@@ -133,9 +134,21 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
     Title Predicted Churner = "COUNT OF PREDICTED CHURNERS : " & COUNT(Predictions[Customer_ID])
     ```
 31. Created a Power BI report `Churn Analysis - Prediction` using various visualizations.
+    ### Note: Please refer `Reports` folder for reports pdf.
 
 ## Power BI Dashboard
 ![image](https://github.com/user-attachments/assets/512ecf91-c0c7-42bc-bfec-9505871c0414)
 #### Churn Analysis - Summary
 ![image](https://github.com/user-attachments/assets/29cad6bf-bbf3-407f-abc5-94b09de64855)
 #### Chain Analysis - Prediction
+
+## Predictions
+After training our model, these were the predictions our model made:
+1. Count of people who will churn in future (Predicted Churners) was found to be 378.
+2. Out of 378 predicted churners, 246 were females and 132 were males.
+3. Maximum number (135) of predicted churners were of the age group greater than 50.
+4. Maximum number (193) of predicted churners were unmarried.
+5. Maximum number (106) of predicted churners were those who were having their tenure group equal to or greater than 2 years.
+6. Maximum number (192) of predicted churners were those who were using credit card services.
+7. Maximum number (355) of predicted churners were those who were having month-to-month contract.
+8. Maximum number (44) of predicted churners were from Uttar Pradesh, followed by Maharashtra(40), Tamil Nadu(37), Karnataka(29), and Andhra Pradesh(24).
