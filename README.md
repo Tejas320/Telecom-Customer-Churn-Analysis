@@ -28,6 +28,8 @@ Our framework uses below components:
 ## Dataset Description
 No. of rows=6419, No. of columns=32. The dataset consists of customer information of a telecom company like Customer_ID, Gender, Age, Married, State, Number_of_Referrals, Tenure_in_Months, Value_Deal, Phone_Service, Multiple_Lines, Internet_Service, Internet_Type, Online_Security, Online_Backup, Device_Protection_Plan, Premium_Support, Streaming_TV, Streaming_Movies, Streaming_Music, Unlimited_Data, Contract, Paperless_Billing, Payment_Method, Monthly_Charge, Total_Charges, Total_Refunds, Total_Extra_Data_Charges, Total_Long_Distance_Charges, Total_Revenue, Customer_Status, Churn_Category, Churn_Reason.
 
+### Note: Please refer `Dataset` folder above for dataset.
+
 ## Project Workflow
 ### SQL (SSMS)
 1. Created a new database `db_Churn` in SQL Server Management Studio, after connecting to server.
@@ -112,14 +114,14 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
     )
     ```
 23. Created a Power BI report `Churn Analysis - Summary` using various visualizations.
-    ### Note: Please refer Reports folder above for reports pdf.
+    ### Note: Please refer `Reports` folder above for reports pdf.
 ### Python (Jupyter Notebook)
 23. Connected SQL database to Jupyter Notebook.
 24. Performed predictive analytics using machine learning algorithm `Random Forest`.
 25. Trained our model on `vw_ChurnData` view created earlier on Step 5 and achieved an accuracy of 84%.
 26. Tested our model on `vw_JoinData` view created earlier on Step 5.
 27. Exporting the `Predictions` table into the SQL database using `to_sql`.
-    ### Note: Please refer Jupyter Notebook folder for detailed machine learning code.
+    ### Note: Please refer `Jupyter Notebook` folder for detailed machine learning code.
 ## Power BI
 28. Imported the `Predictions` table from SQL Server to Power BI.
 29. Created a new measure `Count Predicted Churner` using DAX formula.
@@ -132,4 +134,6 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
     ```
 31. Created a Power BI report `Churn Analysis - Prediction` using various visualizations.
 
-## Visualizations
+## Power BI Dashboard
+![image](https://github.com/user-attachments/assets/512ecf91-c0c7-42bc-bfec-9505871c0414)
+#### Churn Analysis - Summary
