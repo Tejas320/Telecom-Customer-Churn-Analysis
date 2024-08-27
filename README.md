@@ -4,7 +4,7 @@
 1. 
 
 ## Project Objective
-Create an entire ETL process in a database and a Power BI dashboard to utilize the Customer Data and achieve below goals:
+Create an entire ETL process in a database and a Power BI dashboard to utilize the Customer Data and achieve below goals:                                 
 1. Analyze Customer Data at below levels
      a. Demographic
      b. Geographic
