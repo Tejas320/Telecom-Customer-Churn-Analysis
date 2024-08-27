@@ -137,3 +137,5 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
 ## Power BI Dashboard
 ![image](https://github.com/user-attachments/assets/512ecf91-c0c7-42bc-bfec-9505871c0414)
 #### Churn Analysis - Summary
+![image](https://github.com/user-attachments/assets/29cad6bf-bbf3-407f-abc5-94b09de64855)
+#### Chain Analysis - Prediction
