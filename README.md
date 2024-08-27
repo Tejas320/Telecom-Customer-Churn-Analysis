@@ -3,7 +3,11 @@
 ## Tools Used - SQL, Power BI, Python
 
 ## Table of Contents
-1. 
+1. [Project Objective](#project-objective)
+2. [ETL Framework](#etl-framework)
+3. [Dataset Description](#dataset-description)
+4. [Project Workflow](#project-workflow)
+5. [Visualizations](#visualizations)
 
 ## Project Objective
 Create an entire ETL process in a database and a Power BI dashboard to utilize the Customer Data and achieve below goals:                                 
@@ -24,8 +28,8 @@ Our framework uses below components:
 ## Dataset Description
 No. of rows=6419, No. of columns=32. The dataset consists of customer information of a telecom company like Customer_ID, Gender, Age, Married, State, Number_of_Referrals, Tenure_in_Months, Value_Deal, Phone_Service, Multiple_Lines, Internet_Service, Internet_Type, Online_Security, Online_Backup, Device_Protection_Plan, Premium_Support, Streaming_TV, Streaming_Movies, Streaming_Music, Unlimited_Data, Contract, Paperless_Billing, Payment_Method, Monthly_Charge, Total_Charges, Total_Refunds, Total_Extra_Data_Charges, Total_Long_Distance_Charges, Total_Revenue, Customer_Status, Churn_Category, Churn_Reason.
 
-## Preparing Data for Analysis
-### SSMS
+## Project Workflow
+### SQL (SSMS)
 1. Created a new database `db_Churn` in SQL Server Management Studio, after connecting to server.
 2. Imported our CSV file using `Import Flat File` in SSMS and modified the columns by checking Allow Nulls checkbox for every column except for Candidate_ID (Primary Key), and changing bit datatype to varchar50 datatype to avoid errors on importing.
 3. After importing, performed data analysis using SQL queries.
@@ -107,4 +111,25 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
       )
     )
     ```
-    
+23. Created a Power BI report `Churn Analysis - Summary` using various visualizations.
+    ### Note: Please refer Reports folder above for reports pdf.
+### Python (Jupyter Notebook)
+23. Connected SQL database to Jupyter Notebook.
+24. Performed predictive analytics using machine learning algorithm `Random Forest`.
+25. Trained our model on `vw_ChurnData` view created earlier on Step 5 and achieved an accuracy of 84%.
+26. Tested our model on `vw_JoinData` view created earlier on Step 5.
+27. Exporting the `Predictions` table into the SQL database using `to_sql`.
+    ### Note: Please refer Jupyter Notebook folder for detailed machine learning code.
+## Power BI
+28. Imported the `Predictions` table from SQL Server to Power BI.
+29. Created a new measure `Count Predicted Churner` using DAX formula.
+    ```bash
+    Count Predicted Churner = COUNT(Predictions[Customer_ID]) + 0
+    ```
+30. Created a new measure `Title Predicted Churner` using DAX formula.
+    ```bash
+    Title Predicted Churner = "COUNT OF PREDICTED CHURNERS : " & COUNT(Predictions[Customer_ID])
+    ```
+31. Created a Power BI report `Churn Analysis - Prediction` using various visualizations.
+
+## Visualizations
