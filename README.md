@@ -37,7 +37,7 @@ No. of rows=6419, No. of columns=32. The dataset consists of customer informatio
 2. Imported our CSV file using `Import Flat File` in SSMS and modified the columns by checking Allow Nulls checkbox for every column except for Candidate_ID (Primary Key), and changing bit datatype to varchar50 datatype to avoid errors on importing.
 3. After importing, performed data analysis using SQL queries.
 4. Created a new table `prod_Churn` from our previous table `stg_Churn` by replacing NULL values by 'None' or 'No' values.
-5. Created two views `vw_ChurnData' and 'vw_JoinData` to be used later in predictive analysis.
+5. Created two views `vw_ChurnData` and `vw_JoinData` to be used later in predictive analysis.
    ### Note: For Steps 3, 4 and 5, please refer to `SQL Queries` file above for all the queries used in data analysis.
 ### Power BI
 6. Connected Power BI to our SQL Server and imported `prod_Churn` table into our Power Query Editor using Transform Data option.
